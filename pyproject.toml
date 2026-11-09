@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "repobuddy-cli"
+version = "0.1.0"
+description = "A friendly, offline GitHub repository health checker"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{name = "RepoBuddy contributors"}]
+keywords = ["github", "repository", "cli", "open-source", "lint"]
+classifiers = ["Programming Language :: Python :: 3", "License :: OSI Approved :: MIT License", "Environment :: Console", "Topic :: Software Development :: Quality Assurance"]
+
+[project.scripts]
+repobuddy = "repobuddy.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["repobuddy*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
